@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import socket
 import sys
 import struct
@@ -19,7 +20,7 @@ def checksum(msg):
 
 
 class J1708Driver():
-    #serveport: the port the the J1708 Driver. Defaults to the ECM driver, which is on port 6969
+    #serverport: the port the the J1708 Driver. Defaults to the ECM driver, which is on port 6969
     #clientport: the port to listen on. The ECM driver sends to port 6970. Will add a method to register clients for more flexibility.
     def __init__(self,ports=ECM):
         self.serveport,self.clientport = ports
